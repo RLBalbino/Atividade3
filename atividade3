@@ -1,0 +1,42 @@
+// Exercício 1 (Fila de Objetos) - 2 pontos
+// 1. Crie uma classe chamada ItemForja com as propriedades: Nome (string),
+// TempoSegundos (int) e Tipo (string).
+// 2. Crie uma fila (Queue) que armazene objetos do tipo ItemForja.
+// 3. O jogador foi na forja e mandou fabricar 3 itens. Instancie e adicione à fila: uma
+// "Espada de Ferro", um "Escudo" e um "Pacote de Flechas".
+// 4. Simule o sistema do jogo terminando de fabricar o primeiro item. Remova-o da fila e
+// exiba no console: "Item fabricado com sucesso: [Nome]! Tempo de forja:
+// [TempoSegundos] O próximo da fila é: [Nome do próximo]".
+// 5. Faça isso para todos os três itens, quando o último item for forjado, exiba no
+// console: “Fila vazia, nenhum item para forja”.
+using System;
+using System.Collections.Generic;
+public class ItemForja
+{
+    public string tipo;
+    public string nome;
+    public int TempoSegundos;
+}
+
+
+
+public class Program
+{
+    public static void Main()
+    {
+        Forja();
+    }
+
+    public static  void Forja()
+    {
+        Queue<ItemForja> filaforja = new Queue<ItemForja>();
+        filaforja.Enqueue(new ItemForja {tipo = "alskaks", nome = "Espada de Ferro", TempoSegundos = 120});
+        filaforja.Enqueue(new ItemForja {tipo = "Armadura", nome = "Escudo", TempoSegundos = 200});
+        filaforja.Enqueue(new ItemForja {tipo = "Cosumivel", nome = "Pacote de Flechas", TempoSegundos = 60});
+
+    }
+
+}
+
+    
+
