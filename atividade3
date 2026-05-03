@@ -16,12 +16,8 @@ public class ItemForja
     public string tipo;
     public string nome;
     public int TempoSegundos;
-}
 
 
-
-public class Program
-{
     public static void Main()
     {
         Forja();
@@ -30,12 +26,26 @@ public class Program
     public static  void Forja()
     {
         Queue<ItemForja> filaforja = new Queue<ItemForja>();
-        filaforja.Enqueue(new ItemForja {tipo = "alskaks", nome = "Espada de Ferro", TempoSegundos = 120});
+        filaforja.Enqueue(new ItemForja {tipo = "Arma", nome = "Espada de Ferro", TempoSegundos = 120});
         filaforja.Enqueue(new ItemForja {tipo = "Armadura", nome = "Escudo", TempoSegundos = 200});
         filaforja.Enqueue(new ItemForja {tipo = "Cosumivel", nome = "Pacote de Flechas", TempoSegundos = 60});
 
-    }
 
+        while (filaforja.Count > 0)
+        {
+            ItemForja itemTerminado = filaforja.Dequeue();
+            Console.WriteLine($"Item fabricado com sucesso: {itemTerminado.nome}! \nTempo de forja: {itemTerminado.TempoSegundos}s.");
+            
+            if (filaforja.Count > 0 )
+            {
+                Console.WriteLine($"\nO próximo da fila é: {filaforja.Peek().nome}\n.");
+            }
+                
+            
+        }
+        Console.WriteLine("Fila vazia, nenhum item para forja\n");
+
+    }
 }
 
     
