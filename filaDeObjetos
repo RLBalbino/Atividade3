@@ -1,4 +1,8 @@
-// Exercício 1 (Fila de Objetos) - 2 pontos
+using System;
+using System.Collections.Generic;
+namespace Atividade3
+{
+    // Exercício 1 (Fila de Objetos) - 2 pontos
 // 1. Crie uma classe chamada ItemForja com as propriedades: Nome (string),
 // TempoSegundos (int) e Tipo (string).
 // 2. Crie uma fila (Queue) que armazene objetos do tipo ItemForja.
@@ -9,19 +13,12 @@
 // [TempoSegundos] O próximo da fila é: [Nome do próximo]".
 // 5. Faça isso para todos os três itens, quando o último item for forjado, exiba no
 // console: “Fila vazia, nenhum item para forja”.
-using System;
-using System.Collections.Generic;
+
 public class ItemForja
 {
     public string tipo;
     public string nome;
     public int TempoSegundos;
-
-
-    public static void Main()
-    {
-        Forja();
-    }
 
     public static  void Forja()
     {
@@ -46,6 +43,11 @@ public class ItemForja
         Console.WriteLine("Fila vazia, nenhum item para forja\n");
 
     }
+}
+
+    
+
+
 }
 
     
