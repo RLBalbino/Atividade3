@@ -1,1 +1,54 @@
 
+namespace Atividade3
+{
+    public class Personagem
+    {
+        string nome;
+        int velocidade;
+
+        public override string ToString() {
+            return $"{nome} - Velocidade: {velocidade}";
+        }
+
+
+      public static void FilaVelocidade()
+        {
+            List<Personagem> personLista = new List<Personagem>();
+            personLista.Add(new Personagem {nome = "Geralt", velocidade = 15});
+            personLista.Add(new Personagem {nome = "Joel", velocidade = 8});
+            personLista.Add(new Personagem {nome = "Leon", velocidade = 10});
+
+            SelecionSort(personLista);
+            
+              foreach (var p in personLista) Console.WriteLine(p);
+        }
+
+     public static void SelecionSort(List<Personagem> personLista)
+    {
+        int n = personLista.Count;
+
+        // Percorre todo o array
+        for (int i = 0; i < n - 1; i++)
+        {
+            // Encontra o índice do menor elemento na parte não ordenada
+            int minIndex = i;
+            for (int j = i + 1; j < n; j++)
+            {
+                if (personLista[j].velocidade < personLista[minIndex].velocidade)
+                {
+                    minIndex = j;
+                }
+            }
+
+            // Troca o elemento mínimo com o primeiro elemento não ordenado
+            if (minIndex != i)
+            {
+                Personagem temp = personLista[i];
+                personLista[i] = personLista[minIndex];
+                personLista[minIndex] = temp;
+            }
+        }
+    }
+      
+    }
+}
