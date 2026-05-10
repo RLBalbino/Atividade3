@@ -13,7 +13,7 @@ exiba no console: "Item fabricado com sucesso: [Nome]! Tempo de forja:
 5. Faça isso para todos os três itens, quando o último item for forjado, exiba no
 console: “Fila vazia, nenhum item para forja”
 
-# Exercício 2 (Lista e Lila) - 4 pontos
+# Exercício 2 (Lista e Fila) - 4 pontos
 1. Crie uma classe Personagem com: Nome (string) e Velocidade (int).
 2. Crie uma lista com 3 personagens na seguinte ordem:
 ○ "Geralt" (Vel: 15);
