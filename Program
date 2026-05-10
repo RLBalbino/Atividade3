@@ -6,8 +6,10 @@ namespace Atividade3
     {
         public static void Main()
     {
+        
         ItemForja.Forja();
         Personagem.FilaVelocidade();
+        Tabuleiro.TabuleiroHistorico();
     }
     }
 }
