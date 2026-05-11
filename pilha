@@ -1,12 +1,3 @@
-// Exercício 3 (Pilha) - 4 Pontos
-// Em jogos de xadrez ou quebra-cabeça de grade, quando você usa um botão "Desfazer", o jogo restaura a posição anterior do tabuleiro.
-
-// Crie um tabuleiro simples representado por um array unidimensional: string[] tabuleiro = { "Vazio", "Vazio", "Vazio" };.
-// Crie uma pilha de strings para guardar o histórico do tabuleiro.
-// O jogador moveu um personagem para a posição 0. Atualize o tabuleiro: tabuleiro[0] = "Jogador"; e empilhe o tabuleiro na pilha.
-// O jogador moveu o personagem para a posição 1: Atualize o tabuleiro para {"Vazio", "Jogador", "Vazio"} e empilhe de novo.
-// Em C#, arrays são tipos de referência. Se você apenas empilhar a variável tabuleiro, todas as posições da pilha apontarão para o mesmo array e o histórico será inútil. Você deve empilhar uma cópia exata e independente (Clone) do array a cada jogada.
-// Desempilhe a última jogada e exiba como o tabuleiro estava no turno anterior.
 namespace Atividade3
 {
 
